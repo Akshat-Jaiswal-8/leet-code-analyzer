@@ -1,21 +1,18 @@
-const leetcode_Api: string = "https://leetcode.com/api/submissions";
+import { code } from "../services/api";
+import { analyzeCode } from "../services/codeToGpt";
 
-let main_code = null;
-fetch(leetcode_Api)
-    .then(async (res) => {
-      const data = await res.json();
-      const submissions = data.submissions_dump;
-      console.log(submissions)
-      for (const submission of submissions) {
-        if (submission.status_display === "Accepted"){
-          main_code = submission.code
-          return;
-        }
-      }
-    })
-    .catch((error) => {
-      console.error("An error occurred:", error);
-    });
 
-//
-
+(async () => {
+    try{
+    const main_code = await code;
+    console.log(main_code)
+    console.log("before completion")
+    const data = await
+        analyzeCode(main_code);
+    console.log("after completion")
+    console.log(data)
+    }
+        catch (e) {
+        console.log(e)
+    }
+})();

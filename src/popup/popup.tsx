@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./popup.css";
+import {analyzeCode} from "../services/codeToGpt";
 
 const App: React.FC<{}> = () => {
   return (
