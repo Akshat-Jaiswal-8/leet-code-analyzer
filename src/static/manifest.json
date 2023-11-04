@@ -1,0 +1,27 @@
+{
+  "name": "Leet Code-analyser",
+  "description": "Analyze the latest submission on leetcode and provides the rating as well as improved version of your code.",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "icons": {
+    "16": "leetcode.png",
+    "48": "leetcode.png",
+    "128": "leetcode.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Leetcode extension",
+    "default_icon": "leetcode.png"
+  },
+  "permissions": ["storage"],
+  "options_page": "options.html",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}
