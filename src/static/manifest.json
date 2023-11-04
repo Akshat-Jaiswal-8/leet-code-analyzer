@@ -10,7 +10,7 @@
   },
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Leetcode extension",
+    "default_title": "Leet Code-analyser",
     "default_icon": "leetcode.png"
   },
   "permissions": ["storage"],
@@ -20,7 +20,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": ["https://leetcode.com/*"],
       "js": ["contentScript.js"]
     }
   ]

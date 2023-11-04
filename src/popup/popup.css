@@ -1,0 +1,27 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  width: 70rem;
+  height: 58rem;
+  background-color: #eee;
+  margin: 0;
+  padding: 0;
+}
+.main {
+  color: black;
+  text-align: center;
+  font-size: 7rem;
+  margin-bottom: 80px;
+}
+.main-span {
+  color: darkorange;
+}
+.main-input-box {
+  margin: 24px;
+}
+.main-input {
+  padding: 4px;
+  width: 100%;
+  height: 25rem;
+}
