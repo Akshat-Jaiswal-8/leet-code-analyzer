@@ -1,6 +1,6 @@
 import OpenAI from "openai";
+const apiKey = "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"
 
-const apiKey = "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";
 const openai = new OpenAI({ apiKey, dangerouslyAllowBrowser: true });
 
 
@@ -19,7 +19,54 @@ export async function analyzeCode(codeToAnalyze) {
     Improved Code:
     [Your improved code version with comments, indentation, and optimizations]
 
-    Please provide detailed feedback for each of the criteria above and explain any changes made to the code. If you have any suggestions for optimizing the algorithm, please include those as well.`;
+    Please provide detailed feedback for each of the criteria above and explain any changes made to the code. If you have any suggestions for optimizing the algorithm, please include those as well.
+    You can take below code as reference for checking the quality of code. (Only look for the quality of code for checking the quality. Program algo may not be the same)..
+
+"""
+This program implements a linear search algorithm.
+The linear search algorithm is a simple algorithm that searches for a given value in a list of values. The algorithm works by comparing the given value to each value in the list, from left to right. If the given value is equal to a value in the list, the algorithm returns the index of that value in the list. Otherwise, the algorithm returns -1.
+
+Args:
+    list_values (list): The list of values to search.
+    value (object): The value to search for.
+
+Returns:
+    int: The index of the value in the list, or -1 if the value is not found.
+"""
+def linear_search(list_values, value):
+    """
+    This function implements a linear search algorithm.
+
+    Args:
+        list_values (list): The list of values to search.
+    value (object): The value to search for.
+Returns:
+        int: The index of the value in the list, or -1 if the value is not found.
+    """
+
+def linear_search(list_values, value):
+    """
+    This function implements a linear search algorithm.
+
+    Args:
+        list_values (list): The list of values to search.
+        value (object): The value to search for.
+
+    Returns:
+        int: The index of the value in the list, or -1 if the value is not found.
+    """
+
+    # Check if the list is empty.
+    if not list_values:
+        return -1
+
+    # Iterate over the list and compare each value to the given value.
+    for index, value in enumerate(list_values):
+             if value == value:
+            return index
+ # The value was not found in the list.
+    return -1
+    `;
 
     const chatCompletion = await openai.chat.completions.create({
         messages: [{ role: "user", content: message }, {

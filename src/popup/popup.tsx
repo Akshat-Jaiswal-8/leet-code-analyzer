@@ -3,7 +3,47 @@ import ReactDOM from "react-dom";
 import "./popup.css";
 import {analyzeCode} from "../services/codeToGpt";
 import {code} from "../services/api";
-// const code = `import java.util.Arrays;
+
+
+const App: React.FC<{}> =  () => {
+
+    const [data , setData] = useState("");
+    async function fetchGpt() {
+       const finalCode = await code;
+        console.log(finalCode)
+        if(finalCode === -1) setData("Incorrect Code!!");
+        else {
+        const data = await analyzeCode(code)
+        setData(data);
+        }
+
+    }
+    // @ts-ignore
+    useEffect(() => fetchGpt(),[])
+
+  return (
+    <>
+      <div className="main">
+        Leet <span className="main-span">Code-Analyzer</span>
+      </div>
+        <a className="help-link" href={"https://code-analyzer-two.vercel.app/"} >Want Some help ?</a>
+      <div className="main-input-box">
+          {data && <pre className="main-data" >{data}</pre>}
+          {!data && <div className="loader"></div>
+          }
+      </div>
+    </>
+  );
+};
+
+const root = document.createElement("div");
+document.body.appendChild(root);
+ReactDOM.render(<App />, root);
+
+
+
+// ************************* Reference correct code *****************************//
+// / const code = `import java.util.Arrays;
 //
 //    class Main {
 //
@@ -38,37 +78,3 @@ import {code} from "../services/api";
 //
 //        System.out.println("Sorted Array in Ascending Order:");
 //        System.out.println(Arrays.toString(data));`
-
-const App: React.FC<{}> =  () => {
-
-    const [data , setData] = useState("");
-    async function fetchGpt() {
-       const finalCode = await code;
-        console.log(finalCode)
-        if(finalCode === -1) setData("Incorrect Code!!");
-        else {
-        const data = await analyzeCode(code)
-        setData(data);
-        }
-
-    }
-    // @ts-ignore
-    useEffect(() => fetchGpt(),[])
-
-  return (
-    <>
-      <div className="main">
-        Leet <span className="main-span">Code-Analyzer</span>
-      </div>
-      <div className="main-input-box">
-          {data && <pre className="main-data" >{data}</pre>}
-          {!data && <div className="loader"></div>
-          }
-      </div>
-    </>
-  );
-};
-
-const root = document.createElement("div");
-document.body.appendChild(root);
-ReactDOM.render(<App />, root);
