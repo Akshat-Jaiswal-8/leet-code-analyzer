@@ -13,7 +13,7 @@
     "default_title": "Leet Code-analyser",
     "default_icon": "leetcode.png"
   },
-  "permissions": ["storage"],
+  "permissions": ["storage" , "activeTab"],
   "options_page": "options.html",
   "background": {
     "service_worker": "background.js"

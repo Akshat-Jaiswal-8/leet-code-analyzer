@@ -11,8 +11,9 @@ body {
 .main {
   color: black;
   text-align: center;
-  font-size: 7rem;
+  font-size: 4rem;
   margin-bottom: 80px;
+  padding-top: 40px;
 }
 .main-span {
   color: darkorange;

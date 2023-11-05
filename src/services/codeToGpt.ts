@@ -1,11 +1,10 @@
 import OpenAI from "openai";
 
-const apiKey = "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";
+const apiKey = "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";
 const openai = new OpenAI({ apiKey, dangerouslyAllowBrowser: true });
 
 
 export async function analyzeCode(codeToAnalyze) {
-
     const message = `Analyze the following code and provide a comprehensive rating out of 5 based on the following criteria: algorithm efficiency, code comments, code readability, and code indentation. Additionally, please provide an improved version of the code with proper comments, indentation, and any necessary optimizations.
     
     Code to be analyzed:
@@ -29,5 +28,14 @@ export async function analyzeCode(codeToAnalyze) {
         }],
         model: "gpt-3.5-turbo",
     });
-    return (chatCompletion)
+    console.log(chatCompletion.choices[0].message.content);
+    return (chatCompletion.choices[0].message.content)
 }
+
+
+
+
+
+
+
+
