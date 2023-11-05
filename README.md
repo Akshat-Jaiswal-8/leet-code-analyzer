@@ -40,7 +40,16 @@ The challenge is to develop a Chrome extension that enhances the coding practice
 The extension should analyze the code submitted by users, providing feedback on various aspects of code quality beyond just efficiency metrics.
 
 ## Presentation
-> [Link](https://www.canva.com/design/DAFzP0WLJts/gonsU13MYR5eidVvVS-qNQ/view?utm_content=DAFzP0WLJts&utm_campaign=designshare&utm_medium=link&utm_source=editor) 
+> [Link](https://www.canva.com/design/DAFzP0WLJts/gonsU13MYR5eidVvVS-qNQ/view?utm_content=DAFzP0WLJts&utm_campaign=designshare&utm_medium=link&utm_source=editor)
+
+## Images
+![image1](/images/Screenshot%20from%202023-11-05%2013-28-04.png)
+![image2](/images/Screenshot%20from%202023-11-05%2013-28-46.png)
+![image3](/images/Screenshot%20from%202023-11-05%2013-32-38.png)
+![image4](/images/Screenshot%20from%202023-11-05%2013-33-02.png)
+![image5](/images/Screenshot%20from%202023-11-05%2013-33-16.png)
+![image6](/images/Screenshot%20from%202023-11-05%2013-53-41.png)
+
 ## Team Members
 1. Akshat Jaiswal (Admin) : [Github](https://github.com/Akshat-Jaiswal-8)
 1. Anshika Jaiswal : [Github](https://github.com/AnshikaJais)
